@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Count from './components/count'
+import Navbar from './components/Navbar'
+import DashboardImage from './images/Group.png'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	let nums = [
+		{
+			name: 'Jaloliddin',
+			age: 24,
+			city: 'Navoiy',
+		},
+		{
+			name: 'Abbos',
+			age: 25,
+			city: 'Samarqand',
+		},
+		{
+			name: 'Shahriyor',
+			age: 24,
+			city: 'Xorazm',
+		},
+		{
+			name: 'Sulaymon',
+			age: 24,
+			city: 'Xorazm',
+		},
+		{
+			name: 'Behruz',
+			age: 24,
+			city: 'Buxoro',
+		},
+	]
+
+	return (
+		<div className='App'>
+			<Navbar />
+
+			<h1>React APP</h1>
+
+			<img src={DashboardImage} alt='images' />
+
+			<Count numbers={nums} />
+		</div>
+	)
 }
 
-export default App;
+export default App
